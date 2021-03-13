@@ -39,4 +39,40 @@ describe('Parking Cost Page', () => {
 
         chaiExpect(ParkingCostPage.parkingLot.getValue()).to.be.equal('Economy');
     });
+
+    it('should not accept leaving date or time before starting date or time', () => {
+        ParkingCostPage.startingDate.clearValue();
+        ParkingCostPage.startingDate.addValue('3/9/2021');
+        browser.pause(2000);
+        ParkingCostPage.calculateParkingCost.click();
+        browser.pause(4000);
+
+        ParkingCostPage.estimatedParkingCostMessage.should.be.equal('ERROR! YOUR LEAVING DATE OR TIME IS BEFORE YOUR STARTING DATE OR TIME');
+    });
+
+    it('should not accept negative hours or dates', () => {
+        ParkingCostPage.startingTime.clearValue();
+        ParkingCostPage.startingDate.clearValue();
+        browser.pause(2000);
+        ParkingCostPage.startingTime.addValue('-12:00');
+        ParkingCostPage.startingDate.addValue('-3/8/2021');
+        browser.pause(2000);
+        ParkingCostPage.calculateParkingCost.click();
+        browser.pause(4000);
+
+        ParkingCostPage.estimatedParkingCostResult.should.be.equal('ERROR! ENTER A CORRECTLY FORMATTED HOUR AND DATE');
+    });
+    
+    it('should not accept more than 12 hours', () => {
+        ParkingCostPage.startingDate.clearValue();
+        ParkingCostPage.startingTime.clearValue();
+        browser.pause(2000);
+        ParkingCostPage.startingDate.addValue('3/8/2021');
+        ParkingCostPage.startingTime.addValue('20:00');
+        browser.pause(2000);
+        ParkingCostPage.calculateParkingCost.click();
+        browser.pause(4000);
+
+        ParkingCostPage.estimatedParkingCostResult.should.be.equal('ERROR! ENTER A CORRECTLY FORMATTED HOUR');
+    });
 });
