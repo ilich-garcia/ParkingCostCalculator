@@ -5,6 +5,7 @@ import ParkingCostPage from '../pages/ParkingCostPage'
 describe('Parking Cost Page', () => {
     before(() => {
         ParkingCostPage.open();
+        browser.pause(2000);
     });
     
     it('should show the right title', () => {
