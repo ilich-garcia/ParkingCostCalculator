@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Valet Parking Page" timestamp="2021-03-14T11:57:40" time="23.864" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Valet Parking Page"/>
+      <property name="capabilities" value="chrome.89_0_4389_82.windows"/>
+      <property name="file" value=".\test\specs\ValetParking.js"/>
+    </properties>
+    <testcase classname="chrome.89_0_4389_82.windows.Valet Parking Page" name="should return 12 00 for 5 hours" time="9.696">
+      <system-out><![CDATA[
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/d87bf298-9a6c-4b6b-a203-05a5b6d15848/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"Valet\"]|./optgroup/option[normalize-space(@value) = \"Valet\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"Valet\"]|./optgroup/option[normalize-space(@value) = \"Valet\"]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/b7f1cb6b-5a6f-4101-ba7d-deae764676cc/click - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/69b0d836-f38b-4d15-ba8e-eaf8beb4e5f6/clear - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/280c3e52-1ede-41ea-b096-d9b97a1c1c6a/clear - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/7c812f63-4269-4e7a-bd71-59a52a36bab6/clear - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/69b0d836-f38b-4d15-ba8e-eaf8beb4e5f6/value - {"text":"3/8/2021"}
+RESULT: {"text":"3/8/2021"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/280c3e52-1ede-41ea-b096-d9b97a1c1c6a/value - {"text":"3/8/2021"}
+RESULT: {"text":"3/8/2021"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/7c812f63-4269-4e7a-bd71-59a52a36bab6/value - {"text":"5:00"}
+RESULT: {"text":"5:00"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/bfeb909e-50bd-4f46-87d6-72877c8076c2/click - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/e8c600ba-2744-44c6-b021-3c912ad0a57a/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Valet Parking Page" name="should return 18 00 per day" time="9.568">
+      <system-out><![CDATA[
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/c598a51b-d275-4838-a751-c2278f9538b0/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"Valet\"]|./optgroup/option[normalize-space(@value) = \"Valet\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"Valet\"]|./optgroup/option[normalize-space(@value) = \"Valet\"]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/6e62475a-672a-4a35-965e-e5daf307fe0d/click - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/c06b422f-55bd-45d0-9ea8-70bd28afd511/clear - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/fa217129-3111-4ea8-bd3f-0557530fe948/clear - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/c06b422f-55bd-45d0-9ea8-70bd28afd511/value - {"text":"12:00"}
+RESULT: {"text":"12:00"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/fa217129-3111-4ea8-bd3f-0557530fe948/value - {"text":"3/9/2021"}
+RESULT: {"text":"3/9/2021"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/02e1bf1d-e656-48bc-8401-2685f7e4dfe6/click - {}
+RESULT: {}
+COMMAND: POST /session/c3bf8b4d58ea8ad22fb95b49793d5314/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/c3bf8b4d58ea8ad22fb95b49793d5314/element/12107545-20f0-465c-81bd-d3d9ed795170/text - {}
+RESULT: {}
+COMMAND: DELETE /session/c3bf8b4d58ea8ad22fb95b49793d5314 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

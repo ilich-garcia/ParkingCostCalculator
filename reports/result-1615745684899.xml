@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Long Term Surface Parking Page" timestamp="2021-03-14T12:14:52" time="49.052" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Long-Term Surface Parking Page"/>
+      <property name="capabilities" value="chrome.89_0_4389_82.windows"/>
+      <property name="file" value=".\test\specs\LTSurfaceParking.js"/>
+    </properties>
+    <testcase classname="chrome.89_0_4389_82.windows.Long Term Surface Parking Page" name="should return 2 00 for 1 hour" time="9.946">
+      <system-out><![CDATA[
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/2db4dc7f-961f-428c-bcdb-c073993d23fe/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"Long-Surface\"]|./optgroup/option[normalize-space(@value) = \"Long-Surface\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"Long-Surface\"]|./optgroup/option[normalize-space(@value) = \"Long-Surface\"]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/35884b94-a296-4b01-96db-67180dbd6d37/click - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/c33c3706-66a5-4738-ba29-c01dae4f21d6/clear - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/fcbbbc08-7c59-47fb-89e2-b95deafeaa7c/clear - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/29242be0-dc48-47f5-ba99-87788ad833ec/clear - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/c33c3706-66a5-4738-ba29-c01dae4f21d6/value - {"text":"3/8/2021"}
+RESULT: {"text":"3/8/2021"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/fcbbbc08-7c59-47fb-89e2-b95deafeaa7c/value - {"text":"3/8/2021"}
+RESULT: {"text":"3/8/2021"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/29242be0-dc48-47f5-ba99-87788ad833ec/value - {"text":"1:00"}
+RESULT: {"text":"1:00"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/d80215f2-5ac8-4c31-ba17-8418adf00d63/click - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/1b4d378b-03a2-42ba-a1cd-9569d375473f/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Long Term Surface Parking Page" name="should return 10 00 maximum for 10 hours 2 00 10 hours 20 00" time="9.38">
+      <system-out><![CDATA[
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/1497c5d4-b7db-4d29-90c8-c3fa05e1bb64/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"Long-Surface\"]|./optgroup/option[normalize-space(@value) = \"Long-Surface\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"Long-Surface\"]|./optgroup/option[normalize-space(@value) = \"Long-Surface\"]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/7c255e1a-4dcd-4f86-9f71-c15e22a4d97f/click - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/16af8fc1-3e62-4e8d-ba81-b16a3dc95e75/clear - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/16af8fc1-3e62-4e8d-ba81-b16a3dc95e75/value - {"text":"10:00"}
+RESULT: {"text":"10:00"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/909987af-c567-45b2-9660-f61d604f47fc/click - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/b9c7d759-99af-46bf-a00c-c33be63fddfc/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Long Term Surface Parking Page" name="should return 60 00 per week 7th day free" time="11.954">
+      <system-out><![CDATA[
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/e5d3faf4-410a-4047-a3ed-ae6fb1baf33a/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"Long-Surface\"]|./optgroup/option[normalize-space(@value) = \"Long-Surface\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"Long-Surface\"]|./optgroup/option[normalize-space(@value) = \"Long-Surface\"]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/d079beef-c02d-4ee1-8898-fe11cccd530b/click - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/67bb9828-eeba-4fbf-b669-b2b833aa0b74/clear - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/44052b38-d812-4089-a631-74f4ebdd5da4/clear - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/67bb9828-eeba-4fbf-b669-b2b833aa0b74/value - {"text":"12:00"}
+RESULT: {"text":"12:00"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/44052b38-d812-4089-a631-74f4ebdd5da4/value - {"text":"3/15/2021"}
+RESULT: {"text":"3/15/2021"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/ba8f99f3-f10a-4c78-b083-db31487701ce/click - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/646d2e71-424e-4b0f-802b-cb0c71ccfd36/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Long Term Surface Parking Page" name="should return 12 00 for 1 day and 1 minute" time="9.794">
+      <system-out><![CDATA[
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/20f7c949-846b-4ea8-8a59-bde8f3f93829/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"Long-Surface\"]|./optgroup/option[normalize-space(@value) = \"Long-Surface\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"Long-Surface\"]|./optgroup/option[normalize-space(@value) = \"Long-Surface\"]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/52370530-00a4-4b0d-95ef-6d4ff493ac02/click - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/1635af6a-c4c9-4a30-9665-3457f038bc79/clear - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/b4e8e7a6-a806-4bbd-9044-b8d5abf79f53/clear - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/b4e8e7a6-a806-4bbd-9044-b8d5abf79f53/value - {"text":"3/9/2021"}
+RESULT: {"text":"3/9/2021"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/1635af6a-c4c9-4a30-9665-3457f038bc79/value - {"text":"12:01"}
+RESULT: {"text":"12:01"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/0cc458e2-d5fb-438a-bd14-ab3400d07123/click - {}
+RESULT: {}
+COMMAND: POST /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/b3a9efc8aab67f2ad2d50bd92af15fc1/element/5e8edd8b-dd6d-4cc8-a169-332131b22183/text - {}
+RESULT: {}
+COMMAND: DELETE /session/b3a9efc8aab67f2ad2d50bd92af15fc1 - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

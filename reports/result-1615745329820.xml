@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Parking Cost Page" timestamp="2021-03-14T12:08:58" time="65.769" tests="8" failures="5" errors="5" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Parking Cost Page"/>
+      <property name="capabilities" value="chrome.89_0_4389_82.windows"/>
+      <property name="file" value=".\test\specs\ParkingCost.js"/>
+    </properties>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should show the right title" time="0.184">
+      <system-out><![CDATA[
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/window/maximize - {}
+RESULT: {}
+COMMAND: GET /session/3da65b06bbc6cd7482cc5ed805e4f624/title - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should ask for a correctly formatted date" time="2.606">
+      <system-out><![CDATA[
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/5733b461-bd42-4444-b269-a97e93ce2845/click - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/b"}
+COMMAND: GET /session/3da65b06bbc6cd7482cc5ed805e4f624/element/8354f94f-13c2-422c-a40d-0c15f4e33b5f/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should return 0 00" time="9.49">
+      <failure/>
+      <error message="expected '$ 12.00' to equal '$ 0.00'"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/36e814aa-76f0-48c7-bddd-7edc575f009b/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/3d058ed9-caf6-44bd-9436-a61d9ef11caf/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/36e814aa-76f0-48c7-bddd-7edc575f009b/value - {"text":"3/8/2021"}
+RESULT: {"text":"3/8/2021"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/3d058ed9-caf6-44bd-9436-a61d9ef11caf/value - {"text":"3/8/2021"}
+RESULT: {"text":"3/8/2021"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/0ad5f189-9269-4fe5-9f0a-3e4ec4db0d7d/click - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/3da65b06bbc6cd7482cc5ed805e4f624/element/2da75def-fda1-4ef4-9500-47e1f35c0ecf/text - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError: expected '$ 12.00' to equal '$ 0.00'
+    at Context.<anonymous> (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\test\specs\/ParkingCost.js:32:62)
+    at Context.executeSync (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:38:22)
+    at C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:69:68
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should maintain the selected parking lot" time="7.161">
+      <failure/>
+      <error message="expected 'Valet' to equal 'Economy'"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/5080725a-09b5-45ca-a8ee-3d31dcbd780d/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"Economy\"]|./optgroup/option[normalize-space(@value) = \"Economy\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"Economy\"]|./optgroup/option[normalize-space(@value) = \"Economy\"]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/e1d63b28-5d64-40b2-8b1b-de87c55a3122/click - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/d65aaa31-d61f-402a-a54f-d5638b62e0fe/click - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: GET /session/3da65b06bbc6cd7482cc5ed805e4f624/element/9a50e042-a25c-4074-9a3e-e9097efd9f03/property/value - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError: expected 'Valet' to equal 'Economy'
+    at Context.<anonymous> (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\test\specs\/ParkingCost.js:41:65)
+    at Context.executeSync (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:38:22)
+    at C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:69:68
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should not accept leaving date or time before starting date or time" time="7.72">
+      <system-out><![CDATA[
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/e558de23-1cbe-461c-bc24-664a5e1e25cc/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/e558de23-1cbe-461c-bc24-664a5e1e25cc/value - {"text":"3/9/2021"}
+RESULT: {"text":"3/9/2021"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/761653d1-b93c-4a56-89b7-6d8ac0bff9ed/click - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/b"}
+COMMAND: GET /session/3da65b06bbc6cd7482cc5ed805e4f624/element/cbf75184-64ed-463c-b9b9-6e4a3d4d8218/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should not accept negative hours or dates" time="9.684">
+      <failure/>
+      <error message="expected '$ 3,276.00' to equal 'ERROR! ENTER A CORRECTLY FORMATTED HOUR AND DATE'"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"css selector","value":"#StartingTime"}
+RESULT: {"using":"css selector","value":"#StartingTime"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/1eee4dbc-7f1a-4999-8227-41529649feb2/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/1dcbbc41-36a8-4e6a-8938-4d66c49d2a49/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"css selector","value":"#StartingTime"}
+RESULT: {"using":"css selector","value":"#StartingTime"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/1eee4dbc-7f1a-4999-8227-41529649feb2/value - {"text":"-12:00"}
+RESULT: {"text":"-12:00"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/1dcbbc41-36a8-4e6a-8938-4d66c49d2a49/value - {"text":"-3/8/2021"}
+RESULT: {"text":"-3/8/2021"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/4a150b59-cf25-4e54-ba7f-af72758812f9/click - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/3da65b06bbc6cd7482cc5ed805e4f624/element/04d4a1a3-6bcb-48a2-a9fe-b6b57126a04c/text - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError: expected '$ 3,276.00' to equal 'ERROR! ENTER A CORRECTLY FORMATTED HOUR AND DATE'
+    at Context.<anonymous> (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\test\specs\/ParkingCost.js:64:62)
+    at Context.executeSync (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:38:22)
+    at C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:69:68
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should not accept more than 12 hours" time="10.847">
+      <failure/>
+      <error message="expected '$ 0.00' to equal 'ERROR! ENTER A CORRECTLY FORMATTED HOUR'"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/196c9f16-138c-4b85-8cb9-d021b3c7b88d/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"css selector","value":"#StartingTime"}
+RESULT: {"using":"css selector","value":"#StartingTime"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/c0f9fb5d-2cc3-4d4f-ab77-766cb9e930a2/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/196c9f16-138c-4b85-8cb9-d021b3c7b88d/value - {"text":"3/8/2021"}
+RESULT: {"text":"3/8/2021"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"css selector","value":"#StartingTime"}
+RESULT: {"using":"css selector","value":"#StartingTime"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/c0f9fb5d-2cc3-4d4f-ab77-766cb9e930a2/value - {"text":"20:00"}
+RESULT: {"text":"20:00"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/a9bcc182-cfd1-4521-a231-928fe48fbf22/click - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/3da65b06bbc6cd7482cc5ed805e4f624/element/8e9bad2c-7bd9-4aad-9bec-565e135d3f99/text - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError: expected '$ 0.00' to equal 'ERROR! ENTER A CORRECTLY FORMATTED HOUR'
+    at Context.<anonymous> (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\test\specs\/ParkingCost.js:77:62)
+    at Context.executeSync (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:38:22)
+    at C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:69:68
+]]></system-err>
+    </testcase>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should not accept incorrect dates" time="9.526">
+      <failure/>
+      <error message="expected '$ 14,148.00' to equal 'ERROR! ENTER A CORRECTLY FORMATTED DATE'"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/bc28c64a-a1d9-409c-80b3-f17666f0f1eb/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/9b29b810-5db8-492c-b04d-1691644fd118/clear - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/bc28c64a-a1d9-409c-80b3-f17666f0f1eb/value - {"text":"3/40/2021"}
+RESULT: {"text":"3/40/2021"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/9b29b810-5db8-492c-b04d-1691644fd118/value - {"text":"30/4/2021"}
+RESULT: {"text":"30/4/2021"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element/1da81a15-e3f1-48c5-9f8a-fb22aa1970ab/click - {}
+RESULT: {}
+COMMAND: POST /session/3da65b06bbc6cd7482cc5ed805e4f624/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/3da65b06bbc6cd7482cc5ed805e4f624/element/d23efb67-4c8e-46ea-b067-cc3d2fc8a6b2/text - {}
+RESULT: {}
+COMMAND: DELETE /session/3da65b06bbc6cd7482cc5ed805e4f624 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError: expected '$ 14,148.00' to equal 'ERROR! ENTER A CORRECTLY FORMATTED DATE'
+    at Context.<anonymous> (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\test\specs\/ParkingCost.js:90:62)
+    at Context.executeSync (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:38:22)
+    at C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:69:68
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>

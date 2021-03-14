@@ -17,7 +17,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/**/ParkingCost.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -59,10 +59,10 @@ exports.config = {
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
     },
-    {
-        maxInstances: 6,
-        browserName: 'firefox'
-    }
+    // {
+    //     maxInstances: 6,
+    //     browserName: 'firefox'
+    // }
     ],
     //
     // ===================

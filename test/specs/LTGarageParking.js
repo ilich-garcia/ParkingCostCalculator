@@ -7,7 +7,7 @@ describe('Long-Term Garage Parking Page', () => {
         browser.pause(2000);
     });
     
-    it('should calculate $ 4.00 for 2 hours', () => {
+    it('should return $ 4.00 for 2 hours', () => {
         ParkingCostPage.parkingLot.selectByAttribute('value', 'Long-Garage');
         ParkingCostPage.clearDates();
         ParkingCostPage.leavingTime.clearValue();
@@ -22,7 +22,7 @@ describe('Long-Term Garage Parking Page', () => {
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 4.00');
     });
 
-    it('should calculate $ 12.00 maximum for 8 hours -> $ 2.00 * 8 hours = $ 16.00', () => {
+    it('should return $ 12.00 maximum for 8 hours -> $ 2.00 * 8 hours = $ 16.00', () => {
         ParkingCostPage.parkingLot.selectByAttribute('value', 'Long-Garage');
         ParkingCostPage.leavingTime.clearValue();
         browser.pause(2000);
@@ -35,7 +35,7 @@ describe('Long-Term Garage Parking Page', () => {
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 12.00');
     });
 
-    it('should calculate $ 72.00 per week (7th day free)', () => {
+    it('should return $ 72.00 per week (7th day free)', () => {
         ParkingCostPage.parkingLot.selectByAttribute('value', 'Long-Garage');
         ParkingCostPage.clearLeavingDateAndTime();
         browser.pause(2000);
@@ -47,5 +47,19 @@ describe('Long-Term Garage Parking Page', () => {
         browser.pause(4000);
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 72.00');
+    });
+
+    it('should return $ 14.00 for 1 day and 1 minute', () => {
+        ParkingCostPage.parkingLot.selectByAttribute('value', 'Long-Garage');
+        ParkingCostPage.clearLeavingDateAndTime();
+        browser.pause(2000);
+        
+        ParkingCostPage.leavingDate.addValue('3/9/2021'); // Giving one day.
+        ParkingCostPage.leavingTime.addValue('12:01');
+        browser.pause(2000);
+        ParkingCostPage.calculateParkingCost.click();
+        browser.pause(4000);
+
+        ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 14.00');
     });
 });
