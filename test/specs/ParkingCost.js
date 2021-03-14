@@ -76,4 +76,17 @@ describe('Parking Cost Page', () => {
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('ERROR! ENTER A CORRECTLY FORMATTED HOUR');
     });
+
+    it('should not accept incorrect dates', () => {
+        ParkingCostPage.clearDates();
+        browser.pause(2000);
+        
+        ParkingCostPage.startingDate.addValue('3/40/2021');
+        ParkingCostPage.leavingDate.addValue('30/4/2021');
+        browser.pause(2000);
+        ParkingCostPage.calculateParkingCost.click();
+        browser.pause(4000);
+
+        ParkingCostPage.estimatedParkingCostResult.should.be.equal('ERROR! ENTER A CORRECTLY FORMATTED DATE');
+    });
 });
