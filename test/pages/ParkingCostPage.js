@@ -52,12 +52,10 @@ class ParkingCostPage extends Page {
         this.leavingDate.clearValue();
     }
 
-    calculateParkingCostResult(element, text) {
+    calculateParkingCostResult() {
         browser.pause(2000);
         this.calculateParkingCost.click();
         browser.pause(4000);
-
-        element.should.be.equal(text);
     }
 }
 
