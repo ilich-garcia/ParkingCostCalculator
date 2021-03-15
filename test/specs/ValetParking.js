@@ -35,17 +35,4 @@ describe('Valet Parking Page', () => {
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 18.00');
     });
-
-    it('should return $ 30.00 for 1 day and 1 minute', () => {
-        ParkingCostPage.parkingLot.selectByAttribute('value', 'Valet');
-        ParkingCostPage.leavingTime.clearValue();
-        browser.pause(2000);
-        
-        ParkingCostPage.leavingTime.addValue('12:01');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
-
-        ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 30.00');
-    });
 });

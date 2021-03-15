@@ -48,18 +48,4 @@ describe('Long-Term Surface Parking Page', () => {
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 60.00');
     });
-
-    it('should return $ 12.00 for 1 day and 1 minute', () => {
-        ParkingCostPage.parkingLot.selectByAttribute('value', 'Long-Surface');
-        ParkingCostPage.clearLeavingDateAndTime();
-        browser.pause(2000);
-        
-        ParkingCostPage.leavingDate.addValue('3/9/2021'); // Giving one day.
-        ParkingCostPage.leavingTime.addValue('12:01');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
-
-        ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 12.00');
-    });
 });

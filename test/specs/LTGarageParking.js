@@ -48,18 +48,4 @@ describe('Long-Term Garage Parking Page', () => {
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 72.00');
     });
-
-    it('should return $ 14.00 for 1 day and 1 minute', () => {
-        ParkingCostPage.parkingLot.selectByAttribute('value', 'Long-Garage');
-        ParkingCostPage.clearLeavingDateAndTime();
-        browser.pause(2000);
-        
-        ParkingCostPage.leavingDate.addValue('3/9/2021'); // Giving one day.
-        ParkingCostPage.leavingTime.addValue('12:01');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
-
-        ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 14.00');
-    });
 });

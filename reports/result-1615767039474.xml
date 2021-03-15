@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Parking Cost Page" timestamp="2021-03-14T18:10:42" time="14.81" tests="1" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Parking Cost Page"/>
+      <property name="capabilities" value="chrome.89_0_4389_82.windows"/>
+      <property name="file" value=".\test\specs\ParkingCost.js"/>
+    </properties>
+    <testcase classname="chrome.89_0_4389_82.windows.Parking Cost Page" name="should return 30 00 for 1 day and 1 minute Valet Parking" time="9.922">
+      <failure/>
+      <error message="expected '$ 36.00' to equal '$ 30.00'"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/window/maximize - {}
+RESULT: {}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"css selector","value":"#ParkingLot"}
+RESULT: {"using":"css selector","value":"#ParkingLot"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/128788a1-408d-4337-936b-0e4f59f223c8/element - {"using":"xpath","value":"./option[normalize-space(@value) = \"Valet\"]|./optgroup/option[normalize-space(@value) = \"Valet\"]"}
+RESULT: {"using":"xpath","value":"./option[normalize-space(@value) = \"Valet\"]|./optgroup/option[normalize-space(@value) = \"Valet\"]"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/26e89021-39ba-48ad-8002-3c8c2d393ca3/click - {}
+RESULT: {}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/06b0ffa1-15ba-43ed-85ee-e1a3bdc49c0f/clear - {}
+RESULT: {}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/8eff2a4c-1ddd-4baf-b655-431e236d1c09/clear - {}
+RESULT: {}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/d9637ae9-3c1c-4edf-ac81-22fd15105e1c/clear - {}
+RESULT: {}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[2]/td[2]/input[1]"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/06b0ffa1-15ba-43ed-85ee-e1a3bdc49c0f/value - {"text":"3/8/2021"}
+RESULT: {"text":"3/8/2021"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[3]/td[2]/input[1]"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/8eff2a4c-1ddd-4baf-b655-431e236d1c09/value - {"text":"3/9/2021"}
+RESULT: {"text":"3/9/2021"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"css selector","value":"#LeavingTime"}
+RESULT: {"using":"css selector","value":"#LeavingTime"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/d9637ae9-3c1c-4edf-ac81-22fd15105e1c/value - {"text":"12:01"}
+RESULT: {"text":"12:01"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"xpath","value":"/html/body/form/input[2]"}
+RESULT: {"using":"xpath","value":"/html/body/form/input[2]"}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element/6a2d31e8-9c43-4ea9-ba09-d4f38487ba10/click - {}
+RESULT: {}
+COMMAND: POST /session/109117ae5e48950d09669d24abb62092/element - {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+RESULT: {"using":"xpath","value":"/html/body/form/table/tbody/tr[4]/td[2]/span[1]/b"}
+COMMAND: GET /session/109117ae5e48950d09669d24abb62092/element/6eb7b9d6-2c00-4b52-accb-864ff0069164/text - {}
+RESULT: {}
+COMMAND: DELETE /session/109117ae5e48950d09669d24abb62092 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+AssertionError: expected '$ 36.00' to equal '$ 30.00'
+    at Context.<anonymous> (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\test\specs\/ParkingCost.js:106:62)
+    at Context.executeSync (C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:38:22)
+    at C:\Users\Usuario\Documents\Challenge-Acklen-Avenue\ParkingCostCalculator\node_modules\@wdio\sync\build\index.js:69:68
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>
