@@ -10,11 +10,11 @@ class ParkingCostPage extends Page {
     }
 
     get startingDate() {
-        return $('/html/body/form/table/tbody/tr[2]/td[2]/input[1]');
+        return $('#StartingDate');
     }
 
     get leavingDate() {
-        return $('/html/body/form/table/tbody/tr[3]/td[2]/input[1]');
+        return $('#LeavingDate');
     }
 
     get startingTime() {
