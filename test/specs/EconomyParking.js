@@ -15,9 +15,7 @@ describe('Economy Parking Page', () => {
 
         ParkingCostPage.setSameDates();
         ParkingCostPage.leavingTime.addValue('3:00');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 6.00');
     });
@@ -28,9 +26,7 @@ describe('Economy Parking Page', () => {
         browser.pause(2000);
 
         ParkingCostPage.leavingTime.addValue('7:00');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 9.00');
     });
@@ -42,9 +38,7 @@ describe('Economy Parking Page', () => {
 
         ParkingCostPage.leavingTime.addValue('12:00');
         ParkingCostPage.leavingDate.addValue('3/15/2021'); // Giving one week.
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 54.00');
     });

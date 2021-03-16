@@ -15,9 +15,7 @@ describe('Long-Term Surface Parking Page', () => {
 
         ParkingCostPage.setSameDates();
         ParkingCostPage.leavingTime.addValue('1:00');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 2.00');
     });
@@ -28,9 +26,7 @@ describe('Long-Term Surface Parking Page', () => {
         browser.pause(2000);
 
         ParkingCostPage.leavingTime.addValue('10:00');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 10.00');
     });
@@ -42,9 +38,7 @@ describe('Long-Term Surface Parking Page', () => {
 
         ParkingCostPage.leavingTime.addValue('12:00');
         ParkingCostPage.leavingDate.addValue('3/15/2021'); // Giving one week.
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 60.00');
     });

@@ -15,9 +15,7 @@ describe('Short Term Parking Page', () => {
 
         ParkingCostPage.setSameDates();
         ParkingCostPage.leavingTime.addValue('1:00');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 2.00');
     });
@@ -28,9 +26,7 @@ describe('Short Term Parking Page', () => {
         browser.pause(2000);
 
         ParkingCostPage.leavingTime.addValue('2:30');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 5.00');
     });
@@ -42,23 +38,8 @@ describe('Short Term Parking Page', () => {
 
         ParkingCostPage.leavingTime.addValue('12:00');
         ParkingCostPage.leavingDate.addValue('3/9/2021'); // Giving one day.
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 24.00');
-    });
-
-    it('should return $ 26.00 for 1 day and 1 minute', () => {
-        ParkingCostPage.parkingLot.selectByAttribute('value', 'Short');
-        ParkingCostPage.leavingTime.clearValue();
-        browser.pause(2000);
-        
-        ParkingCostPage.leavingTime.addValue('12:01');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
-
-        ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 26.00');
     });
 });

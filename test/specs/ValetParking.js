@@ -15,9 +15,7 @@ describe('Valet Parking Page', () => {
 
         ParkingCostPage.setSameDates();
         ParkingCostPage.leavingTime.addValue('5:00');
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 12.00');
     });
@@ -29,9 +27,7 @@ describe('Valet Parking Page', () => {
 
         ParkingCostPage.leavingTime.addValue('12:00');
         ParkingCostPage.leavingDate.addValue('3/9/2021'); // Giving one day.
-        browser.pause(2000);
-        ParkingCostPage.calculateParkingCost.click();
-        browser.pause(4000);
+        ParkingCostPage.calculateParkingCostResult();
 
         ParkingCostPage.estimatedParkingCostResult.should.be.equal('$ 18.00');
     });
