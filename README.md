@@ -1,4 +1,4 @@
-# Parking Cost Calculator
+# Parking Cost Calculator Automation
 
 This Parking Cost Calculator is a WebdriverIO automation project based on Mocha, Chai, and an integration with Jenkins to support the building and deploying of the automated tests.
 
